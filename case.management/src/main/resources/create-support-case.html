@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Support Case</title>
+</head>
+<body>
+<h2>Create Support Case</h2>
+<form action="/support-case/create" method="post">
+    <label for="summary">Summary:</label>
+    <input type="text" id="summary" name="summary" required>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required></textarea>
+    <label for="screenshot">Screenshot:</label>
+    <input type="file" id="screenshot" name="screenshot">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

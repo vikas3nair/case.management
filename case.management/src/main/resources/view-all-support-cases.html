@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View All Support Cases</title>
+</head>
+<body>
+<h2>All Support Cases</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Summary</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <!-- Iterate over support cases -->
+    <tr th:each="supportCase : ${supportCases}">
+        <td th:text="${supportCase.summary}"></td>
+        <td th:text="${supportCase.status}"></td>
+        <td>
+            <a th:href="@{/support-case/{id}(id=${supportCase.id})}">View</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

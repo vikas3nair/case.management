@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+</head>
+<body>
+<h2>Support Case Statistics</h2>
+<p>Total Support Cases: <span th:text="${totalSupportCases}"></span></p>
+<p>Total Open Cases: <span th:text="${totalOpenCases}"></span></p>
+<p>Total In Progress Cases: <span th:text="${totalInProgressCases}"></span></p>
+<p>Total Fixed Cases: <span th:text="${totalFixedCases}"></span></p>
+<p>Total Won't Fix Cases: <span th:text="${totalWontFixCases}"></span></p>
+<p>Total Canceled Cases: <span th:text="${totalCanceledCases}"></span></p>
+<!-- Add more statistics as needed -->
+</body>
+</html>

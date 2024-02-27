@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Support Case Details</title>
+</head>
+<body>
+<h2>Support Case Details</h2>
+<p>Summary: <span th:text="${supportCase.summary}"></span></p>
+<p>Description: <span th:text="${supportCase.description}"></span></p>
+<p>Status: <span th:text="${supportCase.status}"></span></p>
+<p>Comments:</p>
+<ul>
+    <!-- Iterate over comments -->
+    <li th:each="comment : ${comments}" th:text="${comment.text}"></li>
+</ul>
+<form action="/support-case/{id}/comment" method="post">
+    <textarea name="text" required></textarea>
+    <button type="submit">Post Comment</button>
+</form>
+</body>
+</html>
+s
